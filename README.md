@@ -73,7 +73,7 @@ The Swoop data Api provides methods for requesting, creating, updating and delet
 4) Run: cp .env.example .env
 5) Run: ./vendor/bin/sail up
 6) Run: ./vendor/bin/sail artisan migrate
-5) I recommend Postman to test the http requests listed above 
+5) I recommend Postman to test the http requests listed above or in your favorite browser. 
 
 
 
