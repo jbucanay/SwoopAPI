@@ -7,15 +7,16 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
-## About SwoopAPI
+# About SwoopAPI
 
 The Swoop data Api provides methods for requesting, creating, updating and deleting specific records about student information. Below are the CRUD operations one can perform on this API. 
 
-### HTTP requests
+## HTTP requests
 
-#### GET http://localhost/api/university
-    returns a json object
-    sample return object:
+### GET http://localhost/api/university
+    
+    sample response:
+    ```json
 {
     "data": {
         "id": 1,
@@ -28,9 +29,12 @@ The Swoop data Api provides methods for requesting, creating, updating and delet
     }
 }
     
+    ```
+
 
 ### POST http://localhost/api/university
-    accepts body:
+    
+    request body:
        ```json
         {
             "first_name": string,
@@ -42,21 +46,25 @@ The Swoop data Api provides methods for requesting, creating, updating and delet
         ``` 
    returns a json object
 
-#### PUT/PATCH http://localhost/api/university/{id}
-    accepts body:
-   {
+### PUT/PATCH http://localhost/api/university/{id}
+    
+    request body:
+    ```json
+    {
             "first_name": string,
             "last_name": string,
             "address": string,
             "city": string,
             "state": string
     }
+
+    ```
     returns a json object
 
 ### Delete http://localhost/api/university/{id}
 
 
-### installation
+## installation
 
 0) Have docker installed and running before starting. Make sure to also install PHP, Laravel, and composer
 1) Fork and clone: https://github.com/jbucanay/SwoopAPI
