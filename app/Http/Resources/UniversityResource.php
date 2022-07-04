@@ -14,6 +14,14 @@ class UniversityResource extends JsonResource
      */
     public function toArray($request)
     {
-        return parent::toArray($request);
+        return [
+            'id'=>$this->id,
+            'first_name'=> $this->last_name,
+            'last_name'=> $this->last_name,
+            'address'=> $this->address,
+            'city'=> $this->city,
+            'state'=>$this->state,
+            'created_at'=>$this->created_at
+        ];
     }
 }

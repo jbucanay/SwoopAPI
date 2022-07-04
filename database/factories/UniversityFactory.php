@@ -19,8 +19,8 @@ class UniversityFactory extends Factory
     public function definition()
     {
         return [
-            'first_name' => $this->faker->name,
-            'last_name'=> $this->faker->name,
+            'first_name' => $this->faker->firstName,
+            'last_name'=> $this->faker->lastName,
             'address'=> $this-> faker->streetAddress,
             'city'=> $this->faker->city,
             'state'=> $this->faker->state

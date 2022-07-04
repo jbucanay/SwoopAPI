@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Resources\UniversityCollection;
+use App\Http\Resources\UniversityResource;
 use App\Models\University;
 use Illuminate\Http\Request;
 
@@ -14,29 +16,36 @@ class UniversityController extends Controller
      */
     public function index()
     {
-        //
+       
+        // return new UniversityCollection(University::all());
+
+        return response()-> json(new UniversityCollection(University::all()), 200);
     }
 
     /**
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
+     * @return UniversityResource
      */
     public function store(Request $request)
     {
-        //
+        $university = University::create($request-> only([
+            'first_name', 'last_name', 'address', 'city', 'state'
+        ]));
+
+        return new UniversityResource($university);
     }
 
     /**
      * Display the specified resource.
      *
      * @param  \App\Models\University  $university
-     * @return \Illuminate\Http\Response
+     * @return UniversityResource
      */
     public function show(University $university)
     {
-        //
+        return new UniversityResource($university);
     }
 
     /**
@@ -48,7 +57,11 @@ class UniversityController extends Controller
      */
     public function update(Request $request, University $university)
     {
-        //
+        $university->update($request->only([
+            'first_name', 'last_name', 'address', 'city','state'
+        ]));
+
+        return new UniversityResource($university);
     }
 
     /**
@@ -59,6 +72,8 @@ class UniversityController extends Controller
      */
     public function destroy(University $university)
     {
-        //
+        $university->delete();
+
+        return response()->json(null, 204);
     }
 }
