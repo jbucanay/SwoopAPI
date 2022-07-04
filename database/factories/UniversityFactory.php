@@ -1,9 +1,11 @@
 <?php
 
+
+
 namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
-
+require_once 'vendor/autoload.php';
 /**
  * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\University>
  */
@@ -17,7 +19,11 @@ class UniversityFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'first_name' => $this->faker->name,
+            'last_name'=> $this->faker->name,
+            'address'=> $this-> faker->streetAddress,
+            'city'=> $this->faker->city,
+            'state'=> $this->faker->state
         ];
     }
 }
