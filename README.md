@@ -17,8 +17,8 @@ The Swoop data Api provides methods for requesting, creating, updating and delet
     
     sample response:
     ```json
-{
-    "data": {
+    {
+        "data": {
         "id": 1,
         "first_name": "gilbert",
         "last_name": "baracka",
@@ -26,8 +26,8 @@ The Swoop data Api provides methods for requesting, creating, updating and delet
         "city": "salt lake city",
         "state": "utah",
         "created_at": "2022-07-04T15:08:21.000000Z"
+        }
     }
-}
     
     ```
 
