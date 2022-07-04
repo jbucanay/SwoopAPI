@@ -16,7 +16,7 @@ The Swoop data Api provides methods for requesting, creating, updating and delet
 #### GET http://localhost/api/university
     returns a json object
     sample return object:
-    {
+{
     "data": {
         "id": 1,
         "first_name": "gilbert",
@@ -50,7 +50,7 @@ The Swoop data Api provides methods for requesting, creating, updating and delet
             "address": string,
             "city": string,
             "state": string
-        }
+    }
     returns a json object
 
 ### Delete http://localhost/api/university/{id}
