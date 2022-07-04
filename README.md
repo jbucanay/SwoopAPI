@@ -13,7 +13,7 @@ The Swoop data Api provides methods for requesting, creating, updating and delet
 
 ### HTTP requests
 
-GET http://localhost/api/university
+#### GET http://localhost/api/university
     returns a json object
     sample return object:
     {
@@ -29,8 +29,9 @@ GET http://localhost/api/university
 }
     
 
-POST http://localhost/api/university
+### POST http://localhost/api/university
     accepts body:
+       ```json
         {
             "first_name": string,
             "last_name": string,
@@ -38,9 +39,10 @@ POST http://localhost/api/university
             "city": string,
             "state": string
         }
+        ``` 
    returns a json object
 
-PUT/PATCH http://localhost/api/university/{id}
+#### PUT/PATCH http://localhost/api/university/{id}
     accepts body:
    {
             "first_name": string,
@@ -51,7 +53,7 @@ PUT/PATCH http://localhost/api/university/{id}
         }
     returns a json object
 
-Delete http://localhost/api/university/{id}
+### Delete http://localhost/api/university/{id}
 
 
 ### installation
